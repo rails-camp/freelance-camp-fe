@@ -13,11 +13,13 @@ var router_1 = require('@angular/router');
 var homepage_component_1 = require('./homepage/homepage.component');
 var documents_component_1 = require('./documents/documents.component');
 var proposal_list_component_1 = require('./proposal/proposal-list.component');
+var proposal_new_component_1 = require('./proposal/proposal-new.component');
 var routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: homepage_component_1.HomepageComponent },
     { path: 'documents', component: documents_component_1.DocumentsComponent },
     { path: 'proposals', component: proposal_list_component_1.ProposalListComponent },
+    { path: 'proposals/new', component: proposal_new_component_1.ProposalNewComponent },
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
