@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var DocumentsComponent = (function () {
     function DocumentsComponent() {
+        this.pageTitle = "Document Dashboard";
         this.documents = [
             {
                 title: "My First Doc",
