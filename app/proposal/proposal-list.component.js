@@ -9,11 +9,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 var Rx_1 = require('rxjs/Rx');
 var proposal_service_1 = require('./proposal.service');
 var ProposalListComponent = (function () {
-    function ProposalListComponent(proposalService) {
+    function ProposalListComponent(proposalService, router) {
         this.proposalService = proposalService;
+        this.router = router;
         this.mode = "Observable";
     }
     ProposalListComponent.prototype.ngOnInit = function () {
@@ -26,6 +28,10 @@ var ProposalListComponent = (function () {
         this.proposalService.getProposals()
             .subscribe(function (proposals) { return _this.proposals = proposals; }, function (error) { return _this.errorMessage = error; });
     };
+    ProposalListComponent.prototype.goToShow = function (proposal) {
+        var link = ['/proposal', proposal.id];
+        this.router.navigate(link);
+    };
     ProposalListComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
@@ -34,7 +40,7 @@ var ProposalListComponent = (function () {
             styleUrls: ['proposal-list.component.css'],
             providers: [proposal_service_1.ProposalService]
         }), 
-        __metadata('design:paramtypes', [proposal_service_1.ProposalService])
+        __metadata('design:paramtypes', [proposal_service_1.ProposalService, router_1.Router])
     ], ProposalListComponent);
     return ProposalListComponent;
 }());
