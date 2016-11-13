@@ -9,20 +9,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var Rx_1 = require('rxjs/Rx');
 var proposal_1 = require('./proposal');
+var proposal_service_1 = require('./proposal.service');
 var ProposalNewComponent = (function () {
-    function ProposalNewComponent() {
+    function ProposalNewComponent(proposalService) {
+        this.proposalService = proposalService;
         this.proposal = new proposal_1.Proposal;
         this.submitted = false;
     }
+    ProposalNewComponent.prototype.createProposal = function (proposal) {
+        this.submitted = true;
+        this.proposalService.createProposal(proposal)
+            .subscribe(function (data) { return true; }, function (error) {
+            console.log("Error saving proposal");
+            return Rx_1.Observable.throw(error);
+        });
+    };
     ProposalNewComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'proposal-new',
             templateUrl: 'proposal-new.component.html',
-            styleUrls: ['proposal-new.component.css']
+            styleUrls: ['proposal-new.component.css'],
+            providers: [proposal_service_1.ProposalService]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [proposal_service_1.ProposalService])
     ], ProposalNewComponent);
     return ProposalNewComponent;
 }());
