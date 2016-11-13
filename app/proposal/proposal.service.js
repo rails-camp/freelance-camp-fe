@@ -14,12 +14,15 @@ var Rx_1 = require('rxjs/Rx');
 var ProposalService = (function () {
     function ProposalService(http) {
         this.http = http;
-        this.proposalsUrl = 'http://localhost:3002/proposals.json';
+        this.proposalsUrl = 'http://localhost:3002/proposals';
     }
     ProposalService.prototype.getProposals = function () {
         return this.http.get(this.proposalsUrl)
             .map(function (response) { return response.json(); })
             .catch(this.handleError);
+    };
+    ProposalService.prototype.getProposal = function (id) {
+        return this.http.get(this.proposalsUrl + "/" + id + '.json');
     };
     ProposalService.prototype.handleError = function (error) {
         // In a real world app, we might use a remote logging infrastructure
