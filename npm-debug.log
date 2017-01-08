@@ -7,7 +7,7 @@
 6 silly lifecycle freelance-camp-fe@1.0.0~prestart: no script for prestart, continuing
 7 info lifecycle freelance-camp-fe@1.0.0~start: freelance-camp-fe@1.0.0
 8 verbose lifecycle freelance-camp-fe@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle freelance-camp-fe@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/admin/code/devcamp-tutorials/angular-rails/freelance-camp-fe/node_modules/.bin:/Users/admin/.rvm/gems/ruby-2.3.0/bin:/Users/admin/.rvm/gems/ruby-2.3.0@global/bin:/Users/admin/.rvm/rubies/ruby-2.3.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/admin/.rvm/bin
+9 verbose lifecycle freelance-camp-fe@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/admin/code/devcamp-tutorials/angular-rails/freelance-camp-fe/node_modules/.bin:/Users/admin/.rvm/gems/ruby-2.3.1/bin:/Users/admin/.rvm/gems/ruby-2.3.1@global/bin:/Users/admin/.rvm/rubies/ruby-2.3.1/bin:/usr/local/heroku/bin:/Applications/Postgres93.app/Contents/MacOS/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Development/android-sdk-macosx/platform-tools:/Development/android-sdk-macosx/tools:/Users/admin/.rvm/bin
 10 verbose lifecycle freelance-camp-fe@1.0.0~start: CWD: /Users/admin/code/devcamp-tutorials/angular-rails/freelance-camp-fe
 11 silly lifecycle freelance-camp-fe@1.0.0~start: Args: [ '-c', 'tsc && concurrently "tsc -w" "lite-server" ' ]
 12 silly lifecycle freelance-camp-fe@1.0.0~start: Returned: code: 2  signal: null
@@ -24,7 +24,7 @@
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
 15 verbose pkgid freelance-camp-fe@1.0.0
 16 verbose cwd /Users/admin/code/devcamp-tutorials/angular-rails/freelance-camp-fe
-17 error Darwin 16.1.0
+17 error Darwin 16.3.0
 18 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "start"
 19 error node v5.6.0
 20 error npm  v3.6.0
